@@ -4,7 +4,7 @@
 <head>
 	<title>Illusions of Elafia</title>
 	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width,  initial-scale=.9">
+	<meta name="viewport" content="width=device-width">
 	<meta property="og:title" content="Illusions of Elafia - A game for Elafia Doe.">
 	<meta property="og:description"
 		content="A mind-bending multidimensional action adventure game about traveling between parallel universes.">
@@ -19,78 +19,196 @@
 	<meta property="twitter:creator:id" content="@IllusionsElafia">
 	<meta content="#a12016" data-react-helmet="true" name="theme-color">
 	<meta charset="UTF-8">
-
-	<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
-	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 	<link rel="icon" type="image/x-icon" href="./images/facicon_elafia.png" />
-	<!-- Global site tag (gtag.js) - Google Analytics -->
+	<script>
+		window.dataLayer = window.dataLayer || [];
+		function gtag() { dataLayer.push(arguments); }
+		gtag('consent', 'default', {
+			'ad_storage': 'denied',
+			'analytics_storage': 'denied'
+		});
+	</script>
 	<script async src="https://www.googletagmanager.com/gtag/js?id=G-H9MHELME3H"></script>
 	<script>
 		window.dataLayer = window.dataLayer || [];
 		function gtag() { dataLayer.push(arguments); }
 		gtag('js', new Date());
-
 		gtag('config', 'G-H9MHELME3H');
 	</script>
 	<style>
-		body,
-		h1 {
-			font-family: "Raleway", sans-serif
-		}
-
-		body,
-		html {
-			height: 100%;
-			overflow-x: hidden;
-			overflow-y: visible;
-		}
-
 		body {
-			/* background-color: #16161d; */
-			background-image: url('./images/Illusions_of_Elafia_Game.png');
-			image-rendering: pixelated;
-			background-position: center;
+			overflow-x: hidden;
+			font-family: "Raleway", sans-serif;
+			font-size: 23px !important;
+			text-align: center !important;
+			background-position: left;
 			background-size: cover;
 			background-color: #16161d;
-			background-attachment: fixed;
+			animation: opac 0.8s;
+			margin: 0;
 		}
 
-		.bgimg {
-			min-height: 140%;
+		a {
+			text-decoration: none;
+			margin: 20px;
 		}
+
+		a:hover {
+			opacity: 0.7;
+		}
+
+		p {
+			padding: 10px;
+			padding-left: 15px;
+		}
+
+		.linkLogo {
+			image-rendering: auto;
+			max-width: 35px;
+			pointer-events: none;
+			-webkit-user-drag: none;
+			user-select: none;
+			-moz-user-select: none;
+			-webkit-user-select: none;
+			-ms-user-select: none;
+		}
+
+		.ioeLogo {
+			background-image: url("./images/Illusions_of_Elafia_Logo.png");
+			background-size: contain;
+			background-position: center;
+			background-repeat: no-repeat;
+			image-rendering: auto;
+			margin-left: 5vw;
+			margin-right: 5vw;
+			max-width: 100vw;
+			height: 95%;
+		}
+
+		.gradient {
+			background: rgb(0, 0, 0);
+			background: linear-gradient(90deg, rgba(0, 0, 0, 0) 0%, rgba(255, 255, 255, .10) 33%, rgba(255, 255, 255, .10) 66%, rgba(0, 0, 0, 0) 100%);
+			width: 100vw;
+			height: 42vh;
+			image-rendering: auto;
+			margin-top: 5vh;
+			padding-top: 2vh;
+		}
+
+		.parallaxImage {
+			background-attachment: fixed;
+			background-position: center;
+			background-repeat: no-repeat;
+			background-size: cover;
+			width: 10vw;
+			min-height: 100vh;
+			image-rendering: pixelated;
+		}
+
+		.img1 {
+			background-image: url('./images/Illusions_of_Elafia_Game.png');
+		}
+
+		.img2 {
+			background-image: url('./images/Illusions_of_Elafia_Mountin.png');
+		}
+
+		.section {
+			justify-content: center;
+			justify-items: center;
+			text-align: center;
+
+			width: 100vw;
+			height: 100vh;
+			color: white;
+			overflow: hidden;
+		}
+
+		.bottom {
+			background-size: contain;
+			background-position: center;
+			background-repeat: no-repeat;
+			background-image: url("./images/ArrowDown.png");
+			width: 100vw;
+			height: 7vh;
+			image-rendering: auto;
+			margin-top: 12vh;
+		}
+
+		::-webkit-scrollbar {
+			width: 10px;
+			background-color: #000;
+		}
+
+		::-webkit-scrollbar-thumb {
+			background: #7145e1;
+		}
+
+		::-webkit-scrollbar-thumb:hover {
+			background: #fff;
+		}
+
+		@keyframes opac {
+			from {
+				opacity: 0
+			}
+
+			to {
+				opacity: 1
+			}
+		}
+
+		@media (max-width: 900px) {
+			.ioeLogo {
+				height: 100%;
+			}
+
+			.gradient {
+				height: 33vh;
+			}
+		}
+
 	</style>
 </head>
 
 <body>
-	<div class="bgimg w3-display-container w3-text-white w3-animate-opacity">
-		<div class="w3-display-middle"
-			style="background-color: #16161d8c; min-height: 100%; min-width: 400px; max-width: 720px; padding: 25px; bottom: 0px;">
-			<h1 style="padding-top: 50px; top: 5px;" class="w3-jumbo w3-animate-top w3-center">Illusions of Elafia</h1>
-			<br>
-			<p class="w3-xlarge w3-center">A mind-bending multidimensional action adventure game about traveling between
-				parallel universes.
-				<br><br>
-				Join the discord below!
-			</p>
-			<br>
-
-			<center>
-				<iframe src="https://discord.com/widget?id=331976012235538432&theme=dark" width="350" height="400"
-					allowtransparency="true" frameborder="0"
-					sandbox="allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts"></iframe>
-				<br>
-				<br>
-				<br>
-				<a href="http://twitter.com/IllusionsElafia" class="fa w3-xxlarge fa-twitter w3-hover-opacity "
-					title="Illusions of Elafia on Twitter" style="padding-top: 20px; padding-right: 15px;"></a>
-				<a href="http://instagram.com/IllusionsOfElafia" class="fa w3-xxlarge fa-instagram w3-hover-opacity"
-					title="Illusions of Elafia on Instagram"></a>
-				<br>
-				<p class="w3-xlarge w3-center"> Follow and stay up to date. </p>
-				<br>
-			</center>
+	<div class="section img1 parallaxImage">
+		<div class="gradient">
+			<div class="ioeLogo" alt="Illusions of Elafia logo">
+			</div>
 		</div>
+		<p style="margin-top: 15vh;">
+			A mind-bending multidimensional action adventure game about<br>
+			traveling between parallel universes.
+		</p>
+		<div class="bottom"></div>
+	</div>
+
+
+	<div class="section img2 parallaxImage" style="height: max-content;">
+		<p style="margin-top: 10vh; background-color: #00000080;">
+			This game is in early development, so more is yet to come.<br><br>
+			Please keep in mind, this is being made completely by one person, so please be patient with me. :)
+			<br>
+			Follow the links below to stay up to date.
+		</p>
+		<iframe style="margin-top: 2vh; margin-bottom: 5vh;"
+			src="https://discord.com/widget?id=331976012235538432&theme=dark" width="350" height="400"
+			allowtransparency="true" frameborder="0"
+			sandbox="allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts"></iframe>
+		<br>
+		<a href="http://twitter.com/IllusionsElafia" title="Illusions of Elafia on Twitter">
+			<img class="linkLogo" src="./images/3rdParty/Twitter_Logo.png">
+		</a>
+		<a href="http://instagram.com/IllusionsOfElafia" title="Illusions of Elafia on Instagram">
+			<img class="linkLogo" src="./images/3rdParty/Instagram_Glyph.png">
+		</a>
+		<a href="https://discord.gg/xaJDMnn7xx" title="Join the Illusions of Elafia Discord server">
+			<img class="linkLogo" src="./images/3rdParty/Discord_Logo.png">
+		</a>
+		<br>
+		<br>
 	</div>
 </body>
 
