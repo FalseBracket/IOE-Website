@@ -25,13 +25,14 @@
 		body {
 			overflow-x: hidden;
 			font-family: "Raleway", sans-serif;
-			font-size: 23px !important;
+			font-size: 23px;
 			text-align: center !important;
-			background-position: left;
+			background-position: center;
 			background-size: cover;
 			background-color: #16161d;
 			animation: opac 0.8s;
 			margin: 0;
+			display: block;
 		}
 
 		a {
@@ -40,12 +41,13 @@
 		}
 
 		a:hover {
-			opacity: 0.7;
+			opacity: 0.6;
 		}
 
 		p {
 			padding: 10px;
 			padding-left: 15px;
+			line-height: 32px;
 		}
 
 		.linkLogo {
@@ -68,35 +70,26 @@
 			margin-left: 5vw;
 			margin-right: 5vw;
 			max-width: 100vw;
+			max-height: 33vh;
 			height: 95%;
 		}
 
 		.gradient {
-			background: rgb(0, 0, 0);
-			background: linear-gradient(90deg, rgba(0, 0, 0, 0) 0%, rgba(255, 255, 255, .10) 33%, rgba(255, 255, 255, .10) 66%, rgba(0, 0, 0, 0) 100%);
+			background: rgba(255, 255, 255, 0.03);
+			background: linear-gradient(90deg, rgba(0, 0, 0, 0) 0%, rgba(255, 255, 255, .03) 33%, rgba(255, 255, 255, .03) 66%, rgba(0, 0, 0, 0) 100%);
 			width: 100vw;
-			height: 42vh;
 			image-rendering: auto;
-			margin-top: 5vh;
+		}
+
+		.gradient_Under {
+			height: 40vh;
+			margin-top: 4vh;
 			padding-top: 2vh;
+			min-height: 250px;
 		}
 
-		.parallaxImage {
-			background-attachment: fixed;
-			background-position: center;
-			background-repeat: no-repeat;
-			background-size: cover;
-			width: 10vw;
-			min-height: 100vh;
-			image-rendering: pixelated;
-		}
-
-		.img1 {
-			background-image: url('./images/Illusions_of_Elafia_Game.png');
-		}
-
-		.img2 {
-			background-image: url('./images/Illusions_of_Elafia_Mountin.png');
+		.gradient_Over {
+			height: 90%;
 		}
 
 		.section {
@@ -108,30 +101,21 @@
 			height: 100vh;
 			color: white;
 			overflow: hidden;
-		}
 
-		.bottom {
-			background-size: contain;
-			background-position: center;
-			background-repeat: no-repeat;
-			background-image: url("./images/ArrowDown.png");
-			width: 100vw;
-			height: 7vh;
-			image-rendering: auto;
-			margin-top: 12vh;
+			background: rgba(0, 0, 0, 0.5);
 		}
 
 		::-webkit-scrollbar {
-			width: 10px;
+			width: 0px;
 			background-color: #000;
 		}
 
 		::-webkit-scrollbar-thumb {
-			background: #7145e1;
+			background: #4b2e97;
 		}
 
 		::-webkit-scrollbar-thumb:hover {
-			background: #fff;
+			background: #aaa;
 		}
 
 		@keyframes opac {
@@ -154,47 +138,59 @@
 			}
 		}
 
+		#Teaser {
+			position: fixed;
+			right: 0;
+			bottom: 0;
+			min-width: 100%;
+			min-height: 100%;
+			transform: translateX(calc((100% - 100vw) / 2));
+			z-index: -1;
+		}
+
 	</style>
 </head>
 
-<body>
-	<div class="section img1 parallaxImage">
-		<div class="gradient">
-			<div class="ioeLogo" alt="Illusions of Elafia logo">
+<body background="/images/Illusions_of_Elafia_Game.png">
+	<video autoplay muted loop id="Teaser">
+		<source src="/images/Illusions_of_Elafia_Teaser.mp4" type="video/mp4">
+	</video>
+	<div class="section">
+		<div class="gradient gradient_Under">
+			<div class="gradient gradient_Over">
+				<div class="ioeLogo" alt="Illusions of Elafia logo">
+				</div>
 			</div>
 		</div>
-		<p style="margin-top: 15vh;">
-			A mind-bending multidimensional action adventure game about<br>
-			traveling between parallel universes.
-		</p>
-		<div class="bottom"></div>
-	</div>
-
-
-	<div class="section img2 parallaxImage" style="height: max-content;">
-		<p style="margin-top: 10vh; background-color: #00000080;">
-			This game is in early development, so more is yet to come.<br><br>
-			Please keep in mind, this is being made completely by one person, so please be patient with me. :)
-			<br>
+		<p style="margin-top: 7vh;">
+			A combat focused action adventure game about manipulating parallel universes.<br>
 			Follow the links below to stay up to date.
 		</p>
-		<iframe style="margin-top: 2vh; margin-bottom: 5vh;"
+		<div style="margin-top: 12vh;">
+			<p>
+				<i>Please note, this game is in early development.</i>
+			</p>
+			<a href="http://twitter.com/IllusionsElafia" title="Illusions of Elafia on Twitter">
+				<img class="linkLogo" src="./images/3rdParty/Twitter_Logo.png">
+			</a>
+			<a href="http://instagram.com/IllusionsOfElafia" title="Illusions of Elafia on Instagram">
+				<img class="linkLogo" src="./images/3rdParty/Instagram_Glyph.png">
+			</a>
+			<a href="https://discord.gg/xaJDMnn7xx" title="Illusions of Elafia on Discord">
+				<img class="linkLogo" src="./images/3rdParty/Discord_Logo.png">
+			</a>
+			<br>
+			<br>
+		</div>
+	</div>
+	<div class="section" style="height: max-content;">
+		<iframe style="margin-top: 10vh; margin-bottom: 10vh;"
 			src="https://discord.com/widget?id=331976012235538432&theme=dark" width="350" height="400"
 			allowtransparency="true" frameborder="0"
-			sandbox="allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts"></iframe>
-		<br>
-		<a href="http://twitter.com/IllusionsElafia" title="Illusions of Elafia on Twitter">
-			<img class="linkLogo" src="./images/3rdParty/Twitter_Logo.png">
-		</a>
-		<a href="http://instagram.com/IllusionsOfElafia" title="Illusions of Elafia on Instagram">
-			<img class="linkLogo" src="./images/3rdParty/Instagram_Glyph.png">
-		</a>
-		<a href="https://discord.gg/xaJDMnn7xx" title="Join the Illusions of Elafia Discord server">
-			<img class="linkLogo" src="./images/3rdParty/Discord_Logo.png">
-		</a>
-		<br>
-		<br>
+			sandbox="allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts">
+		</iframe>
 	</div>
 </body>
 
 </html>
+<!-- Copyright 2023 FalseBracket. All Rights Reserved. -->
