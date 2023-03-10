@@ -4,7 +4,7 @@
 <head>
 	<title>Illusions of Elafia</title>
 	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta property="og:title" content="Illusions of Elafia - A game for Elafia Doe.">
 	<meta property="og:description"
 		content="A combat focused action adventure game about manipulating parallel universes.">
@@ -25,7 +25,7 @@
 		body {
 			overflow-x: hidden;
 			font-family: "Raleway", sans-serif;
-			font-size: 23px;
+			font-size: 17px;
 			text-align: center !important;
 			background-position: center;
 			background-size: cover;
@@ -45,8 +45,6 @@
 		}
 
 		p {
-			padding: 10px;
-			padding-left: 15px;
 			line-height: 32px;
 		}
 
@@ -103,6 +101,18 @@
 			overflow: hidden;
 
 			background: rgba(0, 0, 0, 0.5);
+		}
+
+		.centerText {
+			top: 47vh;
+			position: absolute;
+			width: 100%;
+		}
+
+		.bottom {
+			position: absolute;
+			bottom: 25px;
+			width: 100%;
 		}
 
 		::-webkit-scrollbar {
@@ -162,14 +172,12 @@
 				</div>
 			</div>
 		</div>
-		<p style="margin-top: 9vh;">
-			A combat focused action adventure game about manipulating parallel universes.<br>
+		<p class="centerText">
+			<h3>A combat focused action-adventure game about manipulating parallel universes.</h3><br>
 			Follow the links below to stay up to date.
 		</p>
-		<div style="margin-top: 12vh;">
-			<p>
-				<i>Please note, this game is still in early development.</i>
-			</p>
+		<div class="bottom">
+			<p><i>Please note, this game is still in early development.</i></p>
 			<a href="http://twitter.com/IllusionsElafia" title="Illusions of Elafia on Twitter">
 				<img class="linkLogo" src="./images/3rdParty/Twitter_Logo.png">
 			</a>
